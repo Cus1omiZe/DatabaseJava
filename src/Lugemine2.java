@@ -2,11 +2,16 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Lugemine1
+public class Lugemine2
 {
     public static void main(String[] arg) throws IOException
     {
         BufferedReader lugeja = new BufferedReader(new FileReader("linnad.txt"));
-        System.out.println(lugeja.readLine());
+        String rida = lugeja.readLine();
+        while (rida != null)
+        {
+            System.out.println(rida);
+            rida = lugeja.readLine();
+        }
     }
 }
